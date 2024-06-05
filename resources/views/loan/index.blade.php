@@ -2,7 +2,10 @@
 
 @section('content')
     <div class="mx-5">
-        <a href="{{ route('loan.create') }}" class="btn btn-dark">Add loan record</a>
+        <div class="mx-auto col-md-2">
+            <a href="{{ route('loan.create') }}" class="d-flex justify-content-center btn btn-dark">Add loan record</a>
+        </div>
+
 
         <h2 class="font-weight-bold mt-3">Active Loan</h2>
 

@@ -2,7 +2,10 @@
 
 @section('content')
     <div class="mx-5">
-        <a href="{{ route('book.create') }}" class="btn btn-dark">Add book</a>
+        <div class="mx-auto col-md-2">
+            <a href="{{ route('book.create') }}" class="d-flex justify-content-center btn btn-dark">Add book</a>
+        </div>
+        
 
         <h2 class="mt-3 font-weight-bold">Borrowed Books</h2>
         <div class="card">

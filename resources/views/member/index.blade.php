@@ -1,9 +1,10 @@
 @extends('layouts.app')
 @section('content')
     <div class="mx-5">
-
+        <div class="mx-auto col-md-2">
+            <a href="{{ route('member.create') }}" class="d-flex justify-content-center btn btn-dark">Register member</a>
+        </div>
         <h2 class="font-weight-bold mb-3">Member</h2>
-        <a href="{{ route('member.create') }}" class="btn btn-dark">Register member</a>
         <div>
             <div class="card card-body mt-3">
                 <table class="table table-striped">
