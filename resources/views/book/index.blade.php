@@ -31,6 +31,7 @@
                         </tr>
                     @endforeach
                 </table>
+                {{ $borrowedBooks->links() }}
             </div>
         </div>
 
@@ -61,6 +62,7 @@
                         </tr>
                     @endforeach
                 </table>
+                {{ $availableBooks->links() }}
             </div>
         </div>
     </div>

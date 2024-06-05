@@ -57,7 +57,7 @@
             </div>
         </div>
 
-        
+
         <h2 class="font-weight-bold mb-3 mt-3">Loan Records</h2>
 
         <div class="card">
@@ -85,6 +85,7 @@
                         </tr>
                     @endforeach
                 </table>
+                {{ $records->links() }}
             </div>
         </div>
 
