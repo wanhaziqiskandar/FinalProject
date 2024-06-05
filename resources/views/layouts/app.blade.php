@@ -18,10 +18,10 @@
 </head>
 <body>
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
+        <nav class="navbar navbar-expand-md navbar-light shadow-sm" style="background-color: #88AB8E">
             <div class="container">
+                <img src="/book.png" alt="" height="36">
                 <a class="navbar-brand" href="{{ url('/') }}">
-                    <i class="bi bi-book-half"></i>
                     {{ config('app.name', 'Rural Library') }}
                 </a>
                 <div class="collapse navbar-collapse d-flex justify-content-center" id="navbarSupportedContent">
