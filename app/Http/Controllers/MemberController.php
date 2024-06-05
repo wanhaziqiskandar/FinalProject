@@ -43,8 +43,8 @@ class MemberController extends Controller
     {
         return view('member.show', [
             'member' => $member,
-            'loans' => Loan::where('member_id', '=', $member->id)->whereNull('returnDate')->get(),
-            'records' => Loan::where('member_id', '=', $member->id)->whereNotNull('returnDate')->get(),
+            'loans' => Loan::where('member_id', '=', $member->id)->whereNull('returnDate')->paginate(25),
+            'records' => Loan::where('member_id', '=', $member->id)->whereNotNull('returnDate')->orderBy('id', 'DESC')->paginate(25),
         ]);
     }
 

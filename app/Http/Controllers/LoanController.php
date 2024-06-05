@@ -19,15 +19,15 @@ class LoanController extends Controller
     {
         return view('loan.index', [
             'loans' => Loan::whereNull('returnDate')->get(),
-            'records' => Loan::whereNotNull('returnDate')->get()
+            'records' => Loan::whereNotNull('returnDate')->paginate(30)
         ]);
     }
 
     public function search(Request $request)
     {
-        $result = Loan::whereNull('returnDate')->whereAny(['book_id', 'member_icNum'],  '=', "$request->searchkey")->get();
+        $result = Loan::whereNull('returnDate')->whereAny(['book_id', 'member_icNum'],  '=', "$request->searchkey")->paginate(25);
         $loans = Loan::whereNull('returnDate')->get();
-        $records = Loan::whereNotNull('returnDate')->get();
+        $records = Loan::whereNotNull('returnDate')->orderBy('id', 'DESC')->paginate(30);
 
         return view('loan.index', [
             'loans' => $result,

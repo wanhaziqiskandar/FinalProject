@@ -15,8 +15,8 @@ class BookController extends Controller
     {
         return view('book.index', [
             //'books' => Book::all(),
-            'availableBooks' => Book::where('available', 'Yes')->get(),
-            'borrowedBooks' => Book::where('available', 'No')->get()
+            'availableBooks' => Book::where('available', 'Yes')->paginate(30),
+            'borrowedBooks' => Book::where('available', 'No')->paginate(30)
         ]); 
     }
 
@@ -52,8 +52,8 @@ class BookController extends Controller
     {
         return view('book.show', [
             'book' => $book,
-            'loans' => Loan::where('book_id', '=', $book->id)->whereNull('returnDate')->get(),
-            'records' => Loan::where('book_id', '=', $book->id)->whereNotNull('returnDate')->get(),
+            'loans' => Loan::where('book_id', '=', $book->id)->whereNull('returnDate')->paginate(25),
+            'records' => Loan::where('book_id', '=', $book->id)->whereNotNull('returnDate')->orderBy('id', 'DESC')->paginate(25),
         ]);
     }
 
