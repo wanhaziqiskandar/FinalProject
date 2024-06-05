@@ -13,15 +13,18 @@
             <div class="card-body">
 
                 {{-- searchbar --}}
-                <form action="{{ route('loan.search') }}" method = "GET" class = "form-inline">
-                    @csrf
-                    <div class="input-group">
-                        <input type="search" name="searchkey" class="form-control">
-                        <button type="submit" class="btn btn-dark">Search</button>
-                    </div>
-
-                </form>
-
+                <div class="mx-auto col-md-6">
+                    <form action="{{ route('loan.search') }}" method = "GET" class = "form-inline mb-3">
+                        @csrf
+                        <div class="input-group">
+                            <input type="search" name="searchkey" class="form-control">
+                            <button type="submit" class="btn btn-dark">Search</button>
+                        </div>
+    
+                    </form>
+                </div>
+                
+                {{-- end search bar --}}
                 <table class="table table-striped">
                     <tr>
                         <th>Loan ID</th>
