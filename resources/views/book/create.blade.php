@@ -35,7 +35,14 @@
 
                     <div class="mt-3">
                         <label for="category">Category</label>
-                        <input type="text" name="category" class="form-control" required>
+                        {{-- <input type="text" name="category" class="form-control" required> --}}
+                        <select name="category" id="category" class="form-control">
+                            <option value="Novel">Novel</option>
+                            <option value="Religion">Religion</option>
+                            <option value="Children">Children</option>
+                            <option value="Academic">Academic</option>
+                            <option value="General Reading">General Reading</option>
+                        </select>
                     </div>
 
                     <button type="submit" class="btn btn-dark mt-3">Submit</button>
