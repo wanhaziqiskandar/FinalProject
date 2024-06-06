@@ -61,7 +61,7 @@ class MemberController extends Controller
      */
     public function update(Request $request, Member $member)
     {
-        //
+        
     }
 
     /**
@@ -69,6 +69,6 @@ class MemberController extends Controller
      */
     public function destroy(Member $member)
     {
-        //
+        
     }
 }
